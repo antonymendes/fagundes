@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Real</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #fdf6e3, #ffe8f0);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 30px;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 90%;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff4da6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="page">
+    <h1>✨ Convite Real para a Princesa Fagundes 👑</h1>
+    <button onclick="nextPage()">💫 Clique para abrir os portões do castelo</button>
+  </div>
+
+  <script>
+    const pages = [
+      {
+        title: "👑 O Começo da Missão Real",
+        content: `Uma princesa dessas não pode passar por esse mundo sem conhecer a verdadeira joia de Sorocaba:<br><br><strong>A coxinha da Real.</strong><br><br>E essa não é só uma coxinha qualquer... é praticamente patrimônio da cidade.<br><br>A questão é: quem vai te levar até lá?<br><br><em>Spoiler: eu.</em>`,
+        button: "👉 Continuar essa aventura real"
+      },
+      {
+        title: "🔍 A Experiência Personalizada",
+        content: `Mas calma… esse convite vai MUITO além da coxinha.<br><br>Tô falando de um <strong>tour personalizado com guia exclusivo</strong> (sim, eu de novo 😎)<br><br>Com direito a:<br>✅ Roteiro com direito a surpresas<br>✅ Histórias com no mínimo 98% de exagero<br>✅ Risadas espontâneas<br>✅ A coxinha dourada e crocante, claro<br><br>Um dia pra guardar na memória real.`,
+        button: "🍗 Ver como termina essa missão…"
+      },
+      {
+        title: "💌 O Grande Convite",
+        content: `Então…<br><br><strong>Você aceita essa missão real?</strong><br><br>🗓️ <strong>Data:</strong> a combinar com a realeza<br>📍 <strong>Partida:</strong> de onde a princesa desejar<br>🍗 <strong>Destino final:</strong> uma mordida na coxinha da Real com gosto de “esse rolê valeu a pena”<br><br><em>Eu garanto a coxinha. O resto, a gente vive junto.</em>` ,
+        button: "💖 Confirmar presença nessa jornada"
+      }
+    ];
+
+    let current = 0;
+
+    function nextPage() {
+      if (current < pages.length) {
+        const page = pages[current];
+        document.getElementById('page').innerHTML = `
+          <h1>${page.title}</h1>
+          <p>${page.content}</p>
+          <button onclick="nextPage()">${page.button}</button>
+        `;
+        current++;
+      }
+    }
+  </script>
+</body>
+</html>
