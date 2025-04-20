@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coxinha Real</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍗 Coxinha da Realeza: A Joia de Sorocaba</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
+
+  <div class="slide " id="pagina1">
     <h1>🍗 Coxinha da Realeza: A Joia de Sorocaba</h1>
     <p>Uma princesa dessas não pode passar por esse mundo sem conhecer a verdadeira joia de Sorocaba: a coxinha da Real.</p>
-    <a class="button" href="#">Próxima Página</a>
+    <button onclick="mostrarPagina('pagina2')">Próxima Página</button>
   </div>
+
+  <div class="slide hidden" id="pagina2">
+    <h1></h1>
+    <p>Mas calma… esse convite vai MUITO além da coxinha. Tô falando de um tour personalizado com guia exclusivo (sim, eu 😎).</p>
+    <button onclick="mostrarPagina('pagina3')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina3">
+    <h1></h1>
+    <p>Com direito a roteiro com surpresas, histórias exageradas, risadas garantidas e a famosa coxinha dourada e crocante.</p>
+    <button onclick="mostrarPagina('pagina4')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina4">
+    <h1></h1>
+    <p>Eu garanto a coxinha. O resto... a gente vive junto. Você aceita esse rolê real?</p>
+    <button onclick="alert('Convite aceito com honra real!')">Confirmar presença</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
