@@ -43,7 +43,7 @@
   </style>
 </head>
 <body>
-  <div class="slide" id="pagina1">
+  <div class="slide active" id="pagina1">
     <h1>🍗 Coxinha da Realeza: A Joia de Sorocaba</h1>
     <p>Uma princesa dessas não pode passar por esse mundo sem conhecer a verdadeira joia de Sorocaba: a coxinha da Real.</p>
     <button onclick="mostrarPagina('pagina2')">Próxima Página</button>
@@ -67,12 +67,9 @@
   <script>
     function mostrarPagina(id) {
       const todas = document.querySelectorAll('.slide');
-      todas.forEach(p => p.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
+      todas.forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      mostrarPagina('pagina1');
-    });
   </script>
 </body>
 </html>
